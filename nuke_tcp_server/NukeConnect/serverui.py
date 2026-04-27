@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # VSCode connection to Nuke plugin
-# Copyright (c) 2025 Jorge Hernandez Ibañez
+# Copyright (c) 2025 Jorge Hernandez Ibanez
 #
 # This file is part of the Nuke connect for vscode project.
 # Repository: https://github.com/JorgeHI/vscode_nuke
@@ -28,18 +28,18 @@ class NukeTcpServerMenu:
         self.create_menu()
 
     def create_menu(self):
-        # Buscar el menú "Dev" o crearlo si no existe
+        # Buscar el menu "Dev" o crearlo si no existe
         main_menu = nuke.menu("Nuke")
         self.dev_menu = main_menu.findItem("Dev") or main_menu.addMenu("Dev")
 
-        # Añadir al menú Dev
+        # Anadir al menu Dev
         if self.server.is_running():
             self.update_command(on_icon)
         else:
             self.update_command(off_icon)
 
     def update_command(self, icon):
-        """Actualiza el comando en el menú Dev."""
+        """Actualiza el comando en el menu Dev."""
         self.dev_menu.addCommand("Nuke Connect", self.toggle_server, icon=icon)
 
     def toggle_server(self):
@@ -47,11 +47,11 @@ class NukeTcpServerMenu:
         global server_running
 
         if self.server.is_running():
-            # Detener servidor aquí si es necesario
+            # Detener servidor aqui si es necesario
             self.server.stop()
             self.update_command(off_icon)
         else:
-            # Iniciar servidor aquí si es necesario
+            # Iniciar servidor aqui si es necesario
             self.server.start()
             self.update_command(on_icon)
 

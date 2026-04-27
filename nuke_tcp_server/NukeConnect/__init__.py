@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # VSCode connection to Nuke plugin
-# Copyright (c) 2025 Jorge Hernandez Ibañez
+# Copyright (c) 2025 Jorge Hernandez Ibanez
 #
 # This file is part of the Nuke connect for vscode project.
 # Repository: https://github.com/JorgeHI/vscode_nuke
